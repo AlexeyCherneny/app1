@@ -6,11 +6,12 @@ import {
 } from "@aws-sdk/client-cognito-identity-provider";
 import config from "../config.json";
 
+
 export const cognitoClient = new CognitoIdentityProviderClient({
   region: config.region,
   credentials: {
-    accessKeyId: import.meta.env.ACCESS_KEY_ID,
-    secretAccessKey: import.meta.env.SECRET_ACCESS_KEY,
+    accessKeyId: import.meta.env.VITE_ACCESS_KEY_ID,
+    secretAccessKey: import.meta.env.VITE_SECRET_ACCESS_KEY,
   },
 });
 
